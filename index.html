@@ -2,9 +2,9 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>SNS運用代行サービス | 信頼のパートナー</title>
-    <meta name="description" content="SNS運用代行サービスのホームページ。InstagramやX（旧Twitter）、Facebook、TikTokなどのSNS運用をプロが代行し、効果的なマーケティングと集客を実現します。">
-    <meta name="keywords" content="SNS運用, SNSマーケティング, 運用代行, ソーシャルメディア, 集客, Instagram運用, Twitter運用">
+    <title>SNS運用代行サービス | 圧倒的な信頼と実績</title>
+    <meta name="description" content="SNS運用代行サービスのホームページです。マーケティング戦略、コンテンツ制作、運用・分析までワンストップで提供し、あなたのビジネスを成功に導きます。">
+    <meta name="keywords" content="SNS運用, SNSマーケティング, 運用代行, ソーシャルメディア, 集客, Instagram運用, TikTok運用, Facebook運用, 無料素材">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
@@ -13,10 +13,7 @@
             padding: 0;
             line-height: 1.6;
             color: #333;
-            background-color: #f9f9f9;
-        }
-        h1, h2, h3 {
-            margin-top: 0;
+            background-color: #f9fafb;
         }
         a {
             color: #0073e6;
@@ -24,138 +21,215 @@
         }
         header {
             position: fixed;
-            width: 100%;
             top: 0;
-            left: 0;
-            background-color: #0073e6;
-            color: white;
-            z-index: 1000;
+            width: 100%;
+            z-index: 999;
+            background-color: rgba(255,255,255,0.95);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
-        header nav {
+        nav {
             display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 15px 0;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            flex-wrap: wrap;
         }
-        header nav a {
-            color: white;
+        .logo {
+            font-size: 1.4em;
             font-weight: bold;
+            color: #0073e6;
         }
-        header nav a:hover {
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-links li {
+            margin: 10px 15px;
+        }
+        .nav-links a:hover {
             text-decoration: underline;
         }
-        /* Hero section */
+        /* Hero Section */
         .hero {
-            background-image: url('https://source.unsplash.com/1600x900/?social-media,marketing');
+            position: relative;
+            height: 90vh;
+            background-image: url('https://source.unsplash.com/1920x1080/?social-media,marketing');
             background-size: cover;
             background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
             text-align: center;
-            padding: 180px 20px 120px;
-            position: relative;
         }
-        .hero::after {
-            content: "";
+        .hero-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 0;
+            background: rgba(0,0,0,0.5);
         }
         .hero-content {
             position: relative;
-            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
         }
-        .hero h1 {
+        .hero-content h1 {
             font-size: 2.8em;
-            margin-bottom: 20px;
+            margin-bottom: 0.3em;
         }
-        .hero p {
-            font-size: 1.2em;
+        .hero-content p {
+            font-size: 1.3em;
+            margin-bottom: 1em;
         }
-        .section {
-            max-width: 1200px;
-            margin: auto;
+        .btn-primary {
+            display: inline-block;
+            background-color: #0073e6;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+        /* Generic section */
+        section {
             padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        .section h2 {
+        .section-title {
             font-size: 2em;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             text-align: center;
             color: #0073e6;
         }
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
+            transition: all 0.6s ease-out;
         }
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
-        /* About section */
-        .about {
+        /* About Section */
+        .about-container {
             display: flex;
             flex-wrap: wrap;
             gap: 40px;
             align-items: center;
         }
-        .about img {
-            flex: 1 1 400px;
+        .about-text {
+            flex: 1;
+            min-width: 280px;
+        }
+        .about-image {
+            flex: 1;
+            min-width: 280px;
+        }
+        .about-image img {
             width: 100%;
             border-radius: 8px;
         }
-        .about-text {
-            flex: 1 1 500px;
-        }
-        /* Services section */
-        .services {
+        /* Services */
+        .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
         }
         .service-card {
-            background-color: white;
-            padding: 20px;
+            background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
         }
         .service-card img {
             width: 100%;
             height: 150px;
             object-fit: cover;
-            border-radius: 6px;
-            margin-bottom: 15px;
         }
-        /* Process section */
+        .service-card-content {
+            padding: 20px;
+        }
+        .service-card-content h3 {
+            margin-top: 0;
+            color: #0073e6;
+        }
+        /* Process */
         .process-steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
-        .step {
-            background-color: white;
-            padding: 20px;
+        .process-step {
+            background-color: #ffffff;
             border-radius: 8px;
+            padding: 20px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
             text-align: center;
         }
-        .step-number {
-            font-size: 2em;
+        .process-step h3 {
             color: #0073e6;
             margin-bottom: 10px;
         }
-        /* Portfolio section */
-        .portfolio-items {
+        .process-step p {
+            margin: 0;
+        }
+        /* Why Choose */
+        .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
         }
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+        }
+        .feature-item img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+        /* Statistics */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+        .stat-item {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .stat-item h3 {
+            font-size: 2em;
+            color: #0073e6;
+            margin: 0;
+        }
+        .stat-item p {
+            margin-top: 10px;
+            color: #555;
+        }
+        /* Portfolio */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
         .portfolio-item {
-            background-color: white;
+            background-color: #ffffff;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -165,111 +239,145 @@
             height: 180px;
             object-fit: cover;
         }
-        .portfolio-item .content {
+        .portfolio-content {
             padding: 15px;
         }
-        /* Team section */
-        .team-members {
+        /* Team */
+        .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
+            gap: 20px;
         }
         .team-member {
             text-align: center;
         }
         .team-member img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
+            width: 120px;
+            height: 120px;
             object-fit: cover;
+            border-radius: 50%;
             margin-bottom: 10px;
         }
-        /* Blog section */
-        .blog-posts {
+        .team-member h4 {
+            margin: 5px 0;
+            color: #0073e6;
+        }
+        /* Blog */
+        .blog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
         }
         .blog-post {
-            background-color: white;
+            background-color: #ffffff;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
         .blog-post img {
             width: 100%;
-            height: 180px;
+            height: 160px;
             object-fit: cover;
         }
-        .blog-post .content {
+        .blog-post-content {
             padding: 15px;
         }
-        /* Pricing section */
+        .blog-post-content h4 {
+            margin-top: 0;
+            color: #0073e6;
+        }
+        .blog-post-content p {
+            margin-bottom: 0;
+        }
+        /* Pricing */
         .pricing-table {
-            overflow-x: auto;
-        }
-        .pricing-table table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .pricing-table th, .pricing-table td {
-            border: 1px solid #ddd;
-            padding: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
             text-align: center;
         }
-        .pricing-table th {
-            background-color: #0073e6;
-            color: white;
-        }
-        .pricing-table td:first-child {
-            font-weight: bold;
-        }
-        /* Testimonials section */
-        .testimonials {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .testimonial {
-            background-color: white;
-            padding: 20px;
+        .pricing-plan {
+            background-color: #ffffff;
             border-radius: 8px;
+            padding: 30px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
-        /* FAQ section */
+        .pricing-plan h3 {
+            color: #0073e6;
+        }
+        .pricing-plan h4 {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .pricing-plan ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+        .pricing-plan ul li {
+            margin: 10px 0;
+        }
+        .pricing-plan .btn-primary {
+            margin-top: 10px;
+        }
+        /* Testimonials */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .testimonial {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .testimonial p {
+            font-style: italic;
+            margin: 0 0 10px;
+        }
+        .testimonial h4 {
+            margin: 0;
+            color: #0073e6;
+        }
+        /* FAQ */
         .faq-item {
             margin-bottom: 20px;
         }
         .faq-item h4 {
-            margin-bottom: 5px;
+            color: #0073e6;
+            margin-bottom: 10px;
         }
-        /* Contact section */
+        /* Contact */
         .contact-form {
             max-width: 600px;
-            margin: auto;
+            margin: 0 auto;
         }
-        .contact-form input, .contact-form textarea {
+        .contact-form input,
+        .contact-form textarea {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 4px;
+            padding: 12px;
+            margin-bottom: 15px;
             border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            resize: vertical;
         }
         .contact-form button {
-            padding: 10px 20px;
             background-color: #0073e6;
             color: white;
+            padding: 12px 30px;
             border: none;
             border-radius: 4px;
-            cursor: pointer;
+            font-size: 1em;
         }
-        .contact-form button:hover {
-            background-color: #005bb5;
-        }
+        /* Footer */
         footer {
             background-color: #f2f2f2;
             text-align: center;
             padding: 20px;
+            margin-top: 60px;
             font-size: 0.9em;
             color: #666;
         }
@@ -278,250 +386,434 @@
 <body>
     <header>
         <nav>
-            <a href="#home">ホーム</a>
-            <a href="#about">私たちについて</a>
-            <a href="#services">サービス</a>
-            <a href="#process">プロセス</a>
-            <a href="#portfolio">実績</a>
-            <a href="#team">チーム</a>
-            <a href="#blog">ブログ</a>
-            <a href="#pricing">料金</a>
-            <a href="#testimonials">お客様の声</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contact">お問い合わせ</a>
+            <div class="logo">SNS運用代行サービス</div>
+            <ul class="nav-links">
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#about">私たちについて</a></li>
+                <li><a href="#services">サービス</a></li>
+                <li><a href="#process">プロセス</a></li>
+                <li><a href="#features">選ばれる理由</a></li>
+                <li><a href="#stats">実績数値</a></li>
+                <li><a href="#portfolio">実績</a></li>
+                <li><a href="#team">チーム</a></li>
+                <li><a href="#blog">ブログ</a></li>
+                <li><a href="#pricing">料金</a></li>
+                <li><a href="#testimonials">お客様の声</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
         </nav>
     </header>
+
     <section id="home" class="hero">
-        <div class="hero-content">
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-in">
             <h1>あなたのSNSを成功に導くパートナー</h1>
-            <p>SNS運用のプロが、あなたのビジネスを大きく成長させます。</p>
+            <p>SNS運用のプロフェッショナルが戦略立案から運用・分析までサポートします。</p>
+            <a href="#contact" class="btn-primary">無料相談はこちら</a>
         </div>
     </section>
-    <div class="section fade-in" id="about">
-        <h2>私たちについて</h2>
-        <div class="about">
-            <img src="https://source.unsplash.com/600x400/?team,work" alt="チームの写真">
+
+    <section id="about">
+        <h2 class="section-title">私たちについて</h2>
+        <div class="about-container fade-in">
             <div class="about-text">
-                <p>私たちはSNSマーケティングの専門家集団です。長年の経験と最新のトレンドを活かし、お客様のブランド価値を最大化します。企画から運用、分析までワンストップで提供し、お客様の課題を解決します。</p>
-                <p>常にデータドリブンなアプローチを心がけ、効果的な戦略を立案します。コンテンツ制作ではトレンドやユーザー心理を意識したクリエイティブを制作し、SNSを通じて理想の顧客との接点を創出します。</p>
+                <p>私たちは、SNS運用の豊富な経験と最新のマーケティング手法を活かし、クライアントのビジネス成長を支援しています。マーケター・デザイナー・エンジニアのチームが一丸となって、成果の出る運用を実現します。</p>
+                <p>ビジョンは「すべての企業にSNSの力を」。小規模ビジネスから大企業まで、ニーズに応じた最適な運用プランをご提案します。</p>
+            </div>
+            <div class="about-image">
+                <img src="https://source.unsplash.com/800x600/?team,office" alt="チーム写真">
             </div>
         </div>
-    </div>
-    <div class="section fade-in" id="services">
-        <h2>サービス内容</h2>
-        <div class="services">
+    </section>
+
+    <section id="services">
+        <h2 class="section-title">サービス内容</h2>
+        <div class="services-grid fade-in">
             <div class="service-card">
-                <img src="https://source.unsplash.com/400x300/?instagram,social-media" alt="アカウント運用代行">
-                <h3>アカウント運用代行</h3>
-                <p>InstagramやX、Facebook、TikTokなど、各種SNSアカウントの運用を一括で代行します。投稿スケジュールの管理やハッシュタグ戦略など、効果的な運用でフォロワーを増やします。</p>
+                <img src="https://source.unsplash.com/600x400/?social-media,content" alt="運用代行">
+                <div class="service-card-content">
+                    <h3>アカウント運用代行</h3>
+                    <p>Instagram、X（旧Twitter）、Facebook、TikTokなどのアカウント運用を専門スタッフが代行します。投稿計画、コミュニケーション対応、アクティブな運用を実現。</p>
+                </div>
             </div>
             <div class="service-card">
-                <img src="https://source.unsplash.com/400x300/?content,creation" alt="コンテンツ制作">
-                <h3>コンテンツ制作</h3>
-                <p>魅力的な文章やデザインでユーザーの心をつかむ投稿を制作します。写真や動画の企画・撮影・編集までサポートし、ブランドの魅力を最大限に伝えます。</p>
+                <img src="https://source.unsplash.com/600x400/?creative,design" alt="コンテンツ制作">
+                <div class="service-card-content">
+                    <h3>コンテンツ制作</h3>
+                    <p>魅力的な文章・画像・動画を企画・制作。ブランドの魅力を最大限に伝えるコンテンツでユーザーの心を掴みます。</p>
+                </div>
             </div>
             <div class="service-card">
-                <img src="https://source.unsplash.com/400x300/?community,management" alt="コミュニティマネジメント">
-                <h3>コミュニティマネジメント</h3>
-                <p>コメントやDMへの対応、フォロワーとのコミュニケーションを代行し、ファンコミュニティを育成します。エンゲージメントを高め、忠誠度の高いファンを創出します。</p>
+                <img src="https://source.unsplash.com/600x400/?analytics,data" alt="分析・レポート">
+                <div class="service-card-content">
+                    <h3>分析・レポート</h3>
+                    <p>SNS運用の成果をデータで可視化し、改善ポイントを提案します。定期レポートで効果測定と戦略修正を実施。</p>
+                </div>
             </div>
             <div class="service-card">
-                <img src="https://source.unsplash.com/400x300/?analytics,report" alt="分析・レポート">
-                <h3>分析・レポート</h3>
-                <p>SNSの運用結果を定期的に分析し、レポートを作成します。改善点や次の施策を提案し、成果を最大化します。</p>
+                <img src="https://source.unsplash.com/600x400/?community,people" alt="コミュニティ運営">
+                <div class="service-card-content">
+                    <h3>コミュニティ運営</h3>
+                    <p>コメント・DM対応、ファンコミュニティ形成をサポート。ユーザーとのコミュニケーションを促進し、ファン化を加速します。</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="https://source.unsplash.com/600x400/?advertising,online" alt="広告運用">
+                <div class="service-card-content">
+                    <h3>広告運用</h3>
+                    <p>ターゲットに合わせたSNS広告の出稿・運用を代行。費用対効果を最大化し、リーチを拡大します。</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="https://source.unsplash.com/600x400/?strategy,planning" alt="戦略立案">
+                <div class="service-card-content">
+                    <h3>戦略立案</h3>
+                    <p>市場分析と競合調査に基づいたSNS戦略を立案。ブランドの目的に合わせて最適なロードマップを策定します。</p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="section fade-in" id="process">
-        <h2>運用プロセス</h2>
-        <div class="process-steps">
-            <div class="step">
-                <div class="step-number">1</div>
-                <h3>ヒアリング</h3>
-                <p>お客様の課題や目的を丁寧にヒアリングし、理想とするゴールを共有します。</p>
+    </section>
+
+    <section id="process">
+        <h2 class="section-title">運用プロセス</h2>
+        <div class="process-steps fade-in">
+            <div class="process-step">
+                <h3>1. ヒアリング</h3>
+                <p>現状や目標を丁寧にヒアリングし、課題やニーズを把握します。</p>
             </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <h3>戦略立案</h3>
-                <p>ターゲット分析、競合調査を行い、最適なSNS戦略を策定します。</p>
+            <div class="process-step">
+                <h3>2. 戦略策定</h3>
+                <p>ヒアリング結果を基に最適なSNS戦略とコンテンツプランを作成します。</p>
             </div>
-            <div class="step">
-                <div class="step-number">3</div>
-                <h3>運用・制作</h3>
-                <p>コンテンツ制作とアカウント運用を実施し、フォロワーとエンゲージメントを拡大します。</p>
+            <div class="process-step">
+                <h3>3. 運用開始</h3>
+                <p>戦略に沿って投稿・コミュニケーションを実施。広告運用やキャンペーンも実行します。</p>
             </div>
-            <div class="step">
-                <div class="step-number">4</div>
-                <h3>分析・改善</h3>
-                <p>運用結果を分析し、次の施策や改善案を継続的に提案します。</p>
+            <div class="process-step">
+                <h3>4. 分析・改善</h3>
+                <p>成果を分析し、レポートを作成。PDCAサイクルを回して継続的に改善します。</p>
             </div>
         </div>
-    </div>
-    <div class="section fade-in" id="portfolio">
-        <h2>実績紹介</h2>
-        <div class="portfolio-items">
+    </section>
+
+    <section id="features">
+        <h2 class="section-title">選ばれる理由</h2>
+        <div class="features fade-in">
+            <div class="feature-item">
+                <img src="https://source.unsplash.com/120x120/?expertise" alt="専門性">
+                <h3>高い専門性</h3>
+                <p>SNSに精通したプロフェッショナルが運用をサポート。常に最新のトレンドを取り入れます。</p>
+            </div>
+            <div class="feature-item">
+                <img src="https://source.unsplash.com/120x120/?innovation,creative" alt="創造性">
+                <h3>クリエイティブ力</h3>
+                <p>魅力的なクリエイティブとストーリーテリングでブランドの世界観を表現します。</p>
+            </div>
+            <div class="feature-item">
+                <img src="https://source.unsplash.com/120x120/?results,success" alt="実績">
+                <h3>確かな実績</h3>
+                <p>多数のクライアントのSNS成長をサポートしてきた豊富な実績があります。</p>
+            </div>
+            <div class="feature-item">
+                <img src="https://source.unsplash.com/120x120/?support" alt="サポート">
+                <h3>手厚いサポート</h3>
+                <p>運用開始後も迅速なサポートで疑問や不安を解消し、長期的な成果を追求します。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats">
+        <h2 class="section-title">実績数値</h2>
+        <div class="stats fade-in">
+            <div class="stat-item">
+                <h3>100+</h3>
+                <p>運用実績アカウント数</p>
+            </div>
+            <div class="stat-item">
+                <h3>50M+</h3>
+                <p>総フォロワー数増加</p>
+            </div>
+            <div class="stat-item">
+                <h3>95%</h3>
+                <p>継続契約率</p>
+            </div>
+            <div class="stat-item">
+                <h3>15</h3>
+                <p>受賞歴・表彰</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2 class="section-title">実績紹介</h2>
+        <div class="portfolio-grid fade-in">
             <div class="portfolio-item">
-                <img src="https://source.unsplash.com/600x400/?startup,success" alt="ケーススタディ1">
-                <div class="content">
-                    <h3>飲食店のフォロワー数を3倍に</h3>
-                    <p>Instagramを活用して飲食店のフォロワー数を3倍に増やし、来店予約数を大幅に向上させました。</p>
+                <img src="https://source.unsplash.com/600x400/?startup,office" alt="プロジェクト1">
+                <div class="portfolio-content">
+                    <h3>スタートアップAのInstagram運用</h3>
+                    <p>フォロワー数を1年で5倍に増加。ブランドの認知度向上に成功。</p>
                 </div>
             </div>
             <div class="portfolio-item">
-                <img src="https://source.unsplash.com/600x400/?ecommerce,marketing" alt="ケーススタディ2">
-                <div class="content">
-                    <h3>ECサイトの売上を200%増加</h3>
-                    <p>複数SNSでの広告とコンテンツ施策により、ECサイトの売上を200%増加させました。</p>
+                <img src="https://source.unsplash.com/600x400/?coffee-shop,marketing" alt="プロジェクト2">
+                <div class="portfolio-content">
+                    <h3>カフェBのTikTokキャンペーン</h3>
+                    <p>動画コンテンツがバズり、来店数が50%増加しました。</p>
                 </div>
             </div>
             <div class="portfolio-item">
-                <img src="https://source.unsplash.com/600x400/?education,online" alt="ケーススタディ3">
-                <div class="content">
-                    <h3>オンライン講座の受講者数拡大</h3>
-                    <p>ターゲット層に合わせたコンテンツ施策で、オンライン講座の受講者数を大幅に増やしました。</p>
+                <img src="https://source.unsplash.com/600x400/?fashion,brand" alt="プロジェクト3">
+                <div class="portfolio-content">
+                    <h3>アパレルCのブランド構築</h3>
+                    <p>ストーリーテリングを活用し、ファンコミュニティを醸成。</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://source.unsplash.com/600x400/?technology,event" alt="プロジェクト4">
+                <div class="portfolio-content">
+                    <h3>IT企業Dのイベントプロモーション</h3>
+                    <p>SNS広告とライブ配信でイベント参加者を倍増させました。</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://source.unsplash.com/600x400/?food,restaurant" alt="プロジェクト5">
+                <div class="portfolio-content">
+                    <h3>レストランEのレビュー向上施策</h3>
+                    <p>UGC（ユーザー生成コンテンツ）を促進し、星評価が4.8に向上。</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://source.unsplash.com/600x400/?education,online" alt="プロジェクト6">
+                <div class="portfolio-content">
+                    <h3>教育サービスFのリブランディング</h3>
+                    <p>ターゲット分析に基づき、SNS戦略を刷新。問い合わせ数が3倍に。</p>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="section fade-in" id="team">
-        <h2>チーム紹介</h2>
-        <div class="team-members">
+    </section>
+
+    <section id="team">
+        <h2 class="section-title">チーム紹介</h2>
+        <div class="team-grid fade-in">
             <div class="team-member">
-                <img src="https://source.unsplash.com/300x300/?person,portrait" alt="チームメンバー1">
-                <h3>山田 太郎</h3>
-                <p>SNSマーケティングスペシャリスト。豊富な運用経験と分析力でクライアントの課題を解決します。</p>
+                <img src="https://source.unsplash.com/200x200/?person,CEO" alt="CEO">
+                <h4>山田 太郎</h4>
+                <p>代表取締役 / SNS戦略責任者</p>
             </div>
             <div class="team-member">
-                <img src="https://source.unsplash.com/300x300/?woman,portrait" alt="チームメンバー2">
-                <h3>佐藤 花子</h3>
-                <p>クリエイティブディレクター。魅力的なコンテンツ企画とデザインを担当します。</p>
+                <img src="https://source.unsplash.com/200x200/?woman,designer" alt="デザイナー">
+                <h4>佐藤 花子</h4>
+                <p>クリエイティブディレクター</p>
             </div>
             <div class="team-member">
-                <img src="https://source.unsplash.com/300x300/?man,smiling" alt="チームメンバー3">
-                <h3>鈴木 次郎</h3>
-                <p>コミュニティマネージャー。フォロワーとのコミュニケーションを通じてファンを育てます。</p>
+                <img src="https://source.unsplash.com/200x200/?man,marketer" alt="マーケター">
+                <h4>鈴木 健</h4>
+                <p>マーケティングマネージャー</p>
             </div>
             <div class="team-member">
-                <img src="https://source.unsplash.com/300x300/?business,person" alt="チームメンバー4">
-                <h3>田中 美咲</h3>
-                <p>データアナリスト。運用データを分析し、戦略の改善に活かします。</p>
+                <img src="https://source.unsplash.com/200x200/?woman,analyst" alt="アナリスト">
+                <h4>田中 由美</h4>
+                <p>データアナリスト</p>
+            </div>
+            <div class="team-member">
+                <img src="https://source.unsplash.com/200x200/?photographer,portrait" alt="フォトグラファー">
+                <h4>小林 直樹</h4>
+                <p>フォトグラファー</p>
+            </div>
+            <div class="team-member">
+                <img src="https://source.unsplash.com/200x200/?videographer,film" alt="ビデオグラファー">
+                <h4>井上 美咲</h4>
+                <p>ビデオグラファー</p>
+            </div>
+            <div class="team-member">
+                <img src="https://source.unsplash.com/200x200/?web-developer" alt="Web開発者">
+                <h4>高橋 修</h4>
+                <p>Web開発者</p>
+            </div>
+            <div class="team-member">
+                <img src="https://source.unsplash.com/200x200/?customer-support" alt="カスタマーサポート">
+                <h4>中村 綾</h4>
+                <p>カスタマーサポート</p>
             </div>
         </div>
-    </div>
-    <div class="section fade-in" id="blog">
-        <h2>ブログ・資料</h2>
-        <div class="blog-posts">
+    </section>
+
+    <section id="blog">
+        <h2 class="section-title">ブログ・資料</h2>
+        <div class="blog-grid fade-in">
             <div class="blog-post">
-                <img src="https://source.unsplash.com/600x400/?blog,social-media" alt="ブログ1">
-                <div class="content">
-                    <h3>SNSマーケティング成功の秘訣</h3>
-                    <p>最新のSNSトレンドと成功事例をまとめた記事。効果的な運用方法をご紹介します。</p>
+                <img src="https://source.unsplash.com/600x400/?social-media,strategy" alt="ブログ1">
+                <div class="blog-post-content">
+                    <h4>SNS運用で成功するための5つのポイント</h4>
+                    <p>SNS運用で成果を出すために押さえておくべき基本ポイントを解説します。</p>
                 </div>
             </div>
             <div class="blog-post">
-                <img src="https://source.unsplash.com/600x400/?analytics,data" alt="ブログ2">
-                <div class="content">
-                    <h3>データ分析で成果を最大化</h3>
-                    <p>SNSデータの分析手法と改善ポイントを解説。数字から読み解く運用改善のヒント。</p>
+                <img src="https://source.unsplash.com/600x400/?content,creation" alt="ブログ2">
+                <div class="blog-post-content">
+                    <h4>コンテンツ制作のコツとツール紹介</h4>
+                    <p>魅力的なコンテンツを制作するためのコツとおすすめツールをご紹介。</p>
                 </div>
             </div>
             <div class="blog-post">
-                <img src="https://source.unsplash.com/600x400/?creative,design" alt="ブログ3">
-                <div class="content">
-                    <h3>魅力的なコンテンツ作りのコツ</h3>
-                    <p>ユーザーを惹きつけるコンテンツ制作のポイントや事例を紹介します。</p>
+                <img src="https://source.unsplash.com/600x400/?advertising,digital" alt="ブログ3">
+                <div class="blog-post-content">
+                    <h4>SNS広告で成果を上げる秘訣</h4>
+                    <p>広告運用で費用対効果を最大化するためのポイントをまとめました。</p>
+                </div>
+            </div>
+            <div class="blog-post">
+                <img src="https://source.unsplash.com/600x400/?analytics,report" alt="ブログ4">
+                <div class="blog-post-content">
+                    <h4>データ分析で見るSNSマーケティング</h4>
+                    <p>SNSのデータを分析して活用する方法を事例を交えて紹介します。</p>
+                </div>
+            </div>
+            <div class="blog-post">
+                <img src="https://source.unsplash.com/600x400/?community,people" alt="ブログ5">
+                <div class="blog-post-content">
+                    <h4>ファンコミュニティを育てる秘訣</h4>
+                    <p>コミュニティ形成の重要性と具体的な施策を解説します。</p>
+                </div>
+            </div>
+            <div class="blog-post">
+                <img src="https://source.unsplash.com/600x400/?trend,social-media" alt="ブログ6">
+                <div class="blog-post-content">
+                    <h4>最新SNSトレンド2025</h4>
+                    <p>2025年のSNSトレンドとマーケティングへの活用法をまとめました。</p>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="section fade-in" id="pricing">
-        <h2>料金プラン</h2>
-        <div class="pricing-table">
-            <table>
-                <tr>
-                    <th>プラン</th>
-                    <th>月額料金の目安</th>
-                    <th>内容</th>
-                </tr>
-                <tr>
-                    <td>ライトプラン</td>
-                    <td>5〜15万円</td>
-                    <td>基本的なアカウント運用（週数本の投稿、簡易レポートなど）</td>
-                </tr>
-                <tr>
-                    <td>スタンダードプラン</td>
-                    <td>20〜35万円</td>
-                    <td>複数SNS運用、コンテンツ制作、分析レポート・改善提案</td>
-                </tr>
-                <tr>
-                    <td>プレミアムプラン</td>
-                    <td>50万円以上</td>
-                    <td>戦略立案、広告運用、インフルエンサー施策まで一括代行</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    <div class="section fade-in" id="testimonials">
-        <h2>お客様の声</h2>
-        <div class="testimonials">
-            <div class="testimonial">
-                <p>"SNS運用をお願いしてから、フォロワーが急増し売上も伸びました！丁寧な対応で安心して任せられます。"</p>
-                <p><strong>飲食店オーナー様</strong></p>
+    </section>
+
+    <section id="pricing">
+        <h2 class="section-title">料金プラン</h2>
+        <div class="pricing-table fade-in">
+            <div class="pricing-plan">
+                <h3>ライトプラン</h3>
+                <h4>¥50,000〜150,000/月</h4>
+                <ul>
+                    <li>基本的なアカウント運用</li>
+                    <li>週2回の投稿</li>
+                    <li>簡易レポート</li>
+                </ul>
+                <a href="#contact" class="btn-primary">相談する</a>
             </div>
-            <div class="testimonial">
-                <p>"常に最新のトレンドを取り入れたコンテンツを提供してくれるので、ブランドの認知度が高まりました。"</p>
-                <p><strong>アパレルEC企業様</strong></p>
+            <div class="pricing-plan">
+                <h3>スタンダードプラン</h3>
+                <h4>¥200,000〜350,000/月</h4>
+                <ul>
+                    <li>複数SNS運用</li>
+                    <li>コンテンツ制作</li>
+                    <li>詳細レポートと改善提案</li>
+                </ul>
+                <a href="#contact" class="btn-primary">相談する</a>
             </div>
-            <div class="testimonial">
-                <p>"レポートがわかりやすく、改善点が明確なので効果が目に見えて実感できます。"</p>
-                <p><strong>オンライン教育サービス様</strong></p>
+            <div class="pricing-plan">
+                <h3>プレミアムプラン</h3>
+                <h4>¥500,000〜/月</h4>
+                <ul>
+                    <li>全SNS運用・広告運用</li>
+                    <li>戦略立案・キャンペーン企画</li>
+                    <li>24時間サポート</li>
+                </ul>
+                <a href="#contact" class="btn-primary">相談する</a>
             </div>
         </div>
-    </div>
-    <div class="section fade-in" id="faq">
-        <h2>よくある質問</h2>
-        <div class="faq-item">
-            <h4>Q. 契約期間はどれくらいですか？</h4>
-            <p>A. 最短3ヶ月からご契約いただけます。状況に応じて柔軟に対応いたします。</p>
+    </section>
+
+    <section id="testimonials">
+        <h2 class="section-title">お客様の声</h2>
+        <div class="testimonials fade-in">
+            <div class="testimonial">
+                <p>「このサービスのおかげで売上が倍増しました！毎月のレポートも分かりやすく、改善提案が的確です。」</p>
+                <h4>株式会社Alpha CEO</h4>
+            </div>
+            <div class="testimonial">
+                <p>「SNS運用を任せてから、ファンコミュニティが驚くほど成長しました。クリエイティブも素晴らしいです。」</p>
+                <h4>美容サロンB オーナー</h4>
+            </div>
+            <div class="testimonial">
+                <p>「丁寧なサポートと高い専門性に感動しました。安心してお任せできます。」</p>
+                <h4>飲食店C 店長</h4>
+            </div>
+            <div class="testimonial">
+                <p>「TikTokキャンペーンのバズ施策が成功し、店舗の認知度が一気に上がりました。」</p>
+                <h4>カフェD マネージャー</h4>
+            </div>
+            <div class="testimonial">
+                <p>「データ分析に基づく改善提案が的確で、数値に裏付けされた運用が信頼できます。」</p>
+                <h4>教育サービスE 代表</h4>
+            </div>
         </div>
-        <div class="faq-item">
-            <h4>Q. SNS広告の運用もお願いできますか？</h4>
-            <p>A. はい、広告運用も承っています。ご要望に応じてプランをカスタマイズいたします。</p>
+    </section>
+
+    <section id="faq">
+        <h2 class="section-title">よくあるご質問</h2>
+        <div class="fade-in">
+            <div class="faq-item">
+                <h4>Q. どのSNSに対応していますか？</h4>
+                <p>A. Instagram、X（旧Twitter）、Facebook、TikTok、LinkedInなど主要なSNSに対応しています。</p>
+            </div>
+            <div class="faq-item">
+                <h4>Q. コンテンツ制作のみ依頼することは可能ですか？</h4>
+                <p>A. はい、コンテンツ制作のみのご依頼も可能です。お気軽にお問い合わせください。</p>
+            </div>
+            <div class="faq-item">
+                <h4>Q. 最低契約期間はありますか？</h4>
+                <p>A. 最低3ヶ月からのご契約をお願いしております。短期間での成果創出と継続的な改善が重要です。</p>
+            </div>
+            <div class="faq-item">
+                <h4>Q. 支払い方法はどのようになりますか？</h4>
+                <p>A. 銀行振込やクレジットカード支払いに対応しております。ご希望に応じてご相談ください。</p>
+            </div>
+            <div class="faq-item">
+                <h4>Q. 小規模ビジネスでも依頼できますか？</h4>
+                <p>A. はい、規模に関わらず最適なプランをご提案します。お気軽にご相談ください。</p>
+            </div>
+            <div class="faq-item">
+                <h4>Q. SNS広告費は含まれますか？</h4>
+                <p>A. 料金プランには広告運用の手数料が含まれていますが、広告費自体は別途ご予算に応じて設定いただきます。</p>
+            </div>
+            <div class="faq-item">
+                <h4>Q. 途中でプランを変更できますか？</h4>
+                <p>A. はい、運用状況に応じて柔軟にプラン変更が可能です。担当者にご相談ください。</p>
+            </div>
+            <div class="faq-item">
+                <h4>Q. 実績資料を見ることはできますか？</h4>
+                <p>A. 詳細な実績資料や成功事例もご提供可能です。お問い合わせフォームよりご連絡ください。</p>
+            </div>
         </div>
-        <div class="faq-item">
-            <h4>Q. どのSNSに対応していますか？</h4>
-            <p>A. Instagram、X（旧Twitter）、Facebook、TikTok、LinkedInなど主要なSNSに対応しています。</p>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">お問い合わせ</h2>
+        <div class="contact-form fade-in">
+            <form>
+                <input type="text" placeholder="お名前（任意）">
+                <input type="email" placeholder="メールアドレス">
+                <textarea rows="5" placeholder="お問い合わせ内容"></textarea>
+                <button type="submit">送信</button>
+            </form>
         </div>
-        <div class="faq-item">
-            <h4>Q. コンテンツ制作のみ依頼することは可能ですか？</h4>
-            <p>A. はい、コンテンツ制作のみのご依頼も可能です。お気軽にお問い合わせください。</p>
-        </div>
-    </div>
-    <div class="section fade-in" id="contact">
-        <h2>お問い合わせ</h2>
-        <p>サービスについてのご相談やお見積りは、下記フォームよりお気軽にお問い合わせください。</p>
-        <div class="contact-form">
-            <input type="text" placeholder="お名前（任意）">
-            <input type="email" placeholder="メールアドレス">
-            <textarea rows="5" placeholder="お問い合わせ内容"></textarea>
-            <button type="submit">送信</button>
-        </div>
-    </div>
+    </section>
+
     <footer>
-        &copy; 2025 SNS運用代行サービス
+        © 2025 SNS運用代行サービス
     </footer>
+
     <script>
-        // IntersectionObserver for fade-in effects
-        const observer = new IntersectionObserver((entries) => {
+        // Intersection Observer for fade-in
+        const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                     observer.unobserve(entry.target);
                 }
             });
-        }, {
-            threshold: 0.1
-        });
+        }, { threshold: 0.2 });
+
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
         });
