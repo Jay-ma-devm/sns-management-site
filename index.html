@@ -1,9 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <title>SNS運用代行サービス</title>
+    <meta name="description" content="SNS運用代行サービスのホームページ。InstagramやX（旧Twitter）などの運用を代行し、効果的なマーケティングをサポートします。">
+    <meta name="keywords" content="SNS運用, SNSマーケティング, 運用代行, ソーシャルメディア, 集客">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,63 +15,148 @@
             color: #333;
         }
         header {
-            background-color: #0073e6;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        nav {
-            background-color: #005bb5;
-            color: white;
-            display: flex;
-            justify-content: center;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            position: absolute;
+            width: 100%;
+            z-index: 10;
             padding: 10px 0;
         }
-        nav a {
-            color: white;
-            margin: 0 15px;
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        header nav a {
+            color: #fff;
             text-decoration: none;
             font-weight: bold;
         }
-        nav a:hover {
+        header nav a:hover {
             text-decoration: underline;
         }
         .hero {
-            background-color: #f0f8ff;
-            padding: 40px;
+            background-image: url('https://source.unsplash.com/1600x900/?social-media,marketing');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            position: relative;
+            color: #fff;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
         }
         .hero h1 {
-            font-size: 2.2em;
-            margin-bottom: 10px;
+            font-size: 2.8em;
+            margin-bottom: 15px;
         }
         .hero p {
-            font-size: 1.1em;
+            font-size: 1.2em;
         }
         .container {
-            padding: 40px 20px;
             max-width: 1000px;
             margin: auto;
+            padding: 60px 20px;
         }
         .section {
-            margin-bottom: 40px;
+            margin-bottom: 60px;
         }
         .section h2 {
             color: #0073e6;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         .services-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 30px;
         }
         .services-item {
             flex: 1 1 45%;
             background-color: #f7f7f7;
-            padding: 20px;
             border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .footer {
+        .services-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .services-item-content {
+            padding: 20px;
+        }
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .pricing-table th, .pricing-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .pricing-table th {
+            background-color: #0073e6;
+            color: #fff;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #0073e6;
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .cta-button:hover {
+            background-color: #005bb5;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+        .contact-form button {
+            background-color: #0073e6;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #005bb5;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        footer {
             background-color: #f2f2f2;
             padding: 20px;
             text-align: center;
@@ -80,58 +167,108 @@
 </head>
 <body>
     <header>
-        <h1>SNS運用代行サービス</h1>
+        <nav>
+            <a href="#home">ホーム</a>
+            <a href="#services">サービス</a>
+            <a href="#pricing">料金</a>
+            <a href="#contact">お問い合わせ</a>
+        </nav>
     </header>
-    <nav>
-        <a href="#home">ホーム</a>
-        <a href="#services">サービス</a>
-        <a href="#pricing">料金</a>
-        <a href="#contact">お問い合わせ</a>
-    </nav>
-    <section id="home" class="hero">
-        <h1>あなたのSNS運用をプロにお任せ</h1>
-        <p>SNSでの効果的なマーケティングを実現し、ビジネスの成長をサポートします。</p>
+    <section id="home" class="hero fade-in">
+        <div class="hero-content">
+            <h1>あなたのSNS運用をプロにお任せ</h1>
+            <p>SNSでの効果的なマーケティングを実現し、ビジネスの成長をサポートします。</p>
+            <a href="#contact" class="cta-button">無料相談はこちら</a>
+        </div>
     </section>
     <div class="container">
-        <section id="services" class="section">
+        <section id="services" class="section fade-in">
             <h2>サービス内容</h2>
             <div class="services-list">
                 <div class="services-item">
-                    <h3>アカウント運用代行</h3>
-                    <p>Instagram、X（旧Twitter）、Facebook、LinkedInなど、各種SNSアカウントの運用を一括で代行します。投稿スケジュールの管理やハッシュタグ戦略などを行います。</p>
+                    <img src="https://source.unsplash.com/400x300/?social-media-management" alt="アカウント運用代行">
+                    <div class="services-item-content">
+                        <h3>アカウント運用代行</h3>
+                        <p>Instagram、X（旧Twitter）、Facebook、LinkedInなど、各種SNSアカウントの運用を一括で代行します。投稿スケジュールの管理やハッシュタグ戦略などを行います。</p>
+                    </div>
                 </div>
                 <div class="services-item">
-                    <h3>コンテンツ制作</h3>
-                    <p>魅力的な文章とデザインでユーザーの心をつかむ投稿コンテンツを制作。写真や動画の企画・編集もサポートします。</p>
+                    <img src="https://source.unsplash.com/400x300/?content-creation,design" alt="コンテンツ制作">
+                    <div class="services-item-content">
+                        <h3>コンテンツ制作</h3>
+                        <p>魅力的な文章とデザインでユーザーの心をつかむ投稿コンテンツを制作。写真や動画の企画・編集もサポートします。</p>
+                    </div>
                 </div>
                 <div class="services-item">
-                    <h3>コミュニティマネジメント</h3>
-                    <p>コメントやDMへの対応、フォロワーとのコミュニケーションを代行し、ファンコミュニティを育成します。</p>
+                    <img src="https://source.unsplash.com/400x300/?community-management" alt="コミュニティマネジメント">
+                    <div class="services-item-content">
+                        <h3>コミュニティマネジメント</h3>
+                        <p>コメントやDMへの対応、フォロワーとのコミュニケーションを代行し、ファンコミュニティを育成します。</p>
+                    </div>
                 </div>
                 <div class="services-item">
-                    <h3>分析・レポート</h3>
-                    <p>SNSの運用結果を定期的に分析し、レポートを作成。改善点や次の施策を提案します。</p>
+                    <img src="https://source.unsplash.com/400x300/?analytics,report" alt="分析・レポート">
+                    <div class="services-item-content">
+                        <h3>分析・レポート</h3>
+                        <p>SNSの運用結果を定期的に分析し、レポートを作成。改善点や次の施策を提案します。</p>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="pricing" class="section">
+        <section id="pricing" class="section fade-in">
             <h2>料金プラン</h2>
-            <p>お客様のニーズに合わせたプランをご提案します。詳細はお問い合わせください。例：</p>
-            <ul>
-                <li>ライトプラン: SNSアカウント1〜2件の基本運用 – 月額10万円〜</li>
-                <li>スタンダードプラン: 複数SNSの運用およびレポート – 月額20万円〜</li>
-                <li>プレミアムプラン: 戦略立案から広告運用まで – 月額30万円〜</li>
-            </ul>
+            <p>お客様のニーズに合わせたプランをご提案します。以下は一般的な価格帯の目安です。</p>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>プラン</th>
+                        <th>月額料金の目安</th>
+                        <th>内容の例</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ライトプラン</td>
+                        <td>5〜15万円</td>
+                        <td>基本的なアカウント運用（週数本の投稿、簡易レポートなど）</td>
+                    </tr>
+                    <tr>
+                        <td>スタンダードプラン</td>
+                        <td>20〜35万円</td>
+                        <td>複数SNS運用、コンテンツ制作、分析レポート・改善提案</td>
+                    </tr>
+                    <tr>
+                        <td>プレミアムプラン</td>
+                        <td>50万円以上</td>
+                        <td>戦略立案、広告運用、インフルエンサー施策まで一括代行</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
-        <section id="contact" class="section">
+        <section id="contact" class="section fade-in">
             <h2>お問い合わせ</h2>
-            <p>サービスについてのご相談やお見積りは、お気軽にお問い合わせください。</p>
-            <p>メール: example@example.com</p>
-            <p>電話: 03-1234-5678</p>
+            <p>サービスについてのご相談やお見積りは、以下のフォームよりお気軽にお問い合わせください。</p>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="お名前" required>
+                <input type="email" name="email" placeholder="メールアドレス" required>
+                <textarea name="message" rows="5" placeholder="お問い合わせ内容" required></textarea>
+                <button type="submit">送信</button>
+            </form>
         </section>
     </div>
-    <footer class="footer">
+    <footer class="fade-in">
         &copy; 2025 SNS運用代行サービス
     </footer>
+    <script>
+        // Fade-in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
